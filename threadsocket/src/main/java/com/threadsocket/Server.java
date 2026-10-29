@@ -16,8 +16,18 @@ public class Server {
         try(ServerSocket socket = new ServerSocket(PORT)){
          System.out.println("Server in ascolto sulla porta: " + PORT);
         
+        while (true) {
+            
+            Socket clientSocket = socket.accept();
 
+            ClientHandler ch = new ClientHandler(clientSocket);
 
+            Thread th = new Thread(ch);
+            th.start();
+
+        }
+
+        
 
 
         }catch (Exception e) {

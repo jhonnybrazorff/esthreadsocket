@@ -3,13 +3,9 @@ package com.threadsocket;
 public class Spettacolo {
 
     //variabili e costruttore
-    private int capienza = 30;
+    private static final int CAPIENZA = 30;
 
-    public Spettacolo(int capienza){
-        this.capienza = capienza;
-    }
-
-    public int disponibilità = capienza;
+    public int disponibilità = CAPIENZA;
 
     public int postiDisponibili(){
 
@@ -28,15 +24,6 @@ public class Spettacolo {
 
 
     //getters and setters
-
-    public int getCapienza() {
-        return capienza;
-    }
-
-    public void setCapienza(int capienza) {
-        this.capienza = capienza;
-    }
-
     public int getDisponibilità() {
         return disponibilità;
     }
@@ -47,7 +34,7 @@ public class Spettacolo {
 
     @Override
     public String toString() {
-        return "Spettacolo [capienza=" + capienza + ", disponibilità=" + disponibilità + "]";
+        return "Spettacolo [capienza=" + CAPIENZA + ", disponibilità=" + disponibilità + "]";
     }
 
 }
